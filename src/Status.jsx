@@ -1,12 +1,12 @@
 export default function Status() {
   return (
     <>
-      <div className="game-status">
+      <section className="game-status">
           <h2>You win!</h2>
           <p>
-           Well done!
+           Well done! 🎉
           </p>
-      </div>
+      </section>
     </>
   );
 }
