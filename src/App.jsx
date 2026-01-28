@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./Header"
 import Status from "./Status"
+import Languages from "./Languages"
 
 
 export default function AssemblyEndgame() {
@@ -8,6 +9,7 @@ export default function AssemblyEndgame() {
         <main>
             <Header/>
             <Status/>
+            <Languages/>
         </main>
     )
 }
