@@ -21,6 +21,7 @@ export default function AssemblyEndgame() {
       <Languages />
       <section className="word">{wordElements}</section>
       <Keyboard/>
+      <button className="new-game">New Game</button>
     </main>
   );
 }

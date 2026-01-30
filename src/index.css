@@ -81,7 +81,7 @@ header > p {
   justify-content: center;
   align-items: center;
   font-size: 1.125rem;
-  border-bottom: 1px solid #F9F4DA;
+  border-bottom: 1px solid #f9f4da;
 }
 
 .keyboard {
@@ -100,10 +100,23 @@ header > p {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: #FCBA29;
-  border: 1px solid #D7D7D7;
+  background-color: #fcba29;
+  border: 1px solid #d7d7d7;
   border-radius: 4px;
   gap: 6px;
   padding: 6px;
+  cursor: pointer;
+}
+
+.new-game {
+  background-color: #11b5e5;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  margin-top: 26px;
   cursor: pointer;
 }
