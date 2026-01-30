@@ -3,6 +3,7 @@ import Header from "./Header";
 import Status from "./Status";
 import Languages from "./Languages";
 import Keyboard from "./Keyboard";
+import Word from "./Word";
 
 export default function AssemblyEndgame() {
   //Set state for the word element
@@ -17,23 +18,19 @@ export default function AssemblyEndgame() {
     );
   }
 
-  const letters = [...currentWord];
-  const wordElements = letters.map((letter, index) => (
-    <span className="letter" key={index}>
-      {letter.toUpperCase()}
-    </span>
-  ));
-
   return (
     <main>
       <Header />
       <Status />
       <Languages />
-      <section className="word">{wordElements}</section>
-      <Keyboard 
+      <Word 
+      currentWord={currentWord} 
       guessedLetters={guessedLetters} 
-      currentWord={currentWord}
-      handleClick={handleClick} 
+      />
+      <Keyboard
+        guessedLetters={guessedLetters}
+        currentWord={currentWord}
+        handleClick={handleClick}
       />
       <button className="new-game">New Game</button>
     </main>

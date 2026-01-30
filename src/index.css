@@ -65,7 +65,7 @@ header > p {
   padding: 4.5px;
 }
 
-.word {
+.word-section{
   display: flex;
   justify-content: center;
   gap: 2px;
@@ -73,7 +73,7 @@ header > p {
 
 .letter {
   background-color: #323232;
-  color: #f9f4da;
+  color: transparent;
   padding: 6px;
   height: 40px;
   width: 40px;
@@ -82,6 +82,9 @@ header > p {
   align-items: center;
   font-size: 1.125rem;
   border-bottom: 1px solid #f9f4da;
+}
+.letter.guessed {
+color:#F9F4DA ;
 }
 
 .keyboard {
@@ -107,12 +110,12 @@ header > p {
   padding: 6px;
   cursor: pointer;
 }
-.keyboard-btn.correct{
-  background-color: #10A95B;
+.keyboard-btn.correct {
+  background-color: #10a95b;
 }
 
-.keyboard-btn.wrong{
-background-color: #EC5D49;
+.keyboard-btn.wrong {
+  background-color: #ec5d49;
 }
 
 .new-game {

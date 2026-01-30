@@ -9,13 +9,10 @@ export default function Keyboard(props) {
         const isGuessed = props.guessedLetters.includes(letter);
         const isCorrect = isGuessed && props.currentWord.includes(letter);
         const isWrong = isGuessed && !props.currentWord.includes(letter);
-        const className = clsx(
-            "keyboard-btn",
-            {
-                correct: isCorrect,
-                wrong: isWrong
-            }
-        )
+        const className = clsx("keyboard-btn", {
+          correct: isCorrect,
+          wrong: isWrong,
+        });
         return (
           <button
             key={letter}
