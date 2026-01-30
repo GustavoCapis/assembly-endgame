@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import Header from "./Header";
 import Status from "./Status";
 import Languages from "./Languages";
@@ -10,9 +10,12 @@ export default function AssemblyEndgame() {
 
   //Set state for the guessed letters
   const [guessedLetters, setGuessedLetters] = useState([]);
+    console.log(guessedLetters)
 
   function handleClick(letter) {
-    setGuessedLetters((prev) => [...prev, letter]);
+    setGuessedLetters((prevLetters) =>
+      prevLetters.includes(letter) ? prevLetters : [...prevLetters, letter],
+    );
   }
 
   const letters = [...currentWord];
