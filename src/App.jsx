@@ -2,9 +2,10 @@ import React from "react";
 import Header from "./Header";
 import Status from "./Status";
 import Languages from "./Languages";
+import Keyboard from "./Keyboard";
 
 export default function AssemblyEndgame() {
-  //set state for the word element
+  //Set state for the word element
   const [currentWord, setCurrentWord] = React.useState("react");
   const letters = [...currentWord];
   const wordElements = letters.map((letter, index) => (
@@ -19,6 +20,7 @@ export default function AssemblyEndgame() {
       <Status />
       <Languages />
       <section className="word">{wordElements}</section>
+      <Keyboard/>
     </main>
   );
 }
