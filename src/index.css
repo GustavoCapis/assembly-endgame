@@ -107,6 +107,13 @@ header > p {
   padding: 6px;
   cursor: pointer;
 }
+.keyboard-btn.correct{
+  background-color: #10A95B;
+}
+
+.keyboard-btn.wrong{
+background-color: #EC5D49;
+}
 
 .new-game {
   background-color: #11b5e5;

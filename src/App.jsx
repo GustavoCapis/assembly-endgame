@@ -10,7 +10,6 @@ export default function AssemblyEndgame() {
 
   //Set state for the guessed letters
   const [guessedLetters, setGuessedLetters] = useState([]);
-    console.log(guessedLetters)
 
   function handleClick(letter) {
     setGuessedLetters((prevLetters) =>
@@ -31,7 +30,11 @@ export default function AssemblyEndgame() {
       <Status />
       <Languages />
       <section className="word">{wordElements}</section>
-      <Keyboard handleClick={handleClick} />
+      <Keyboard 
+      guessedLetters={guessedLetters} 
+      currentWord={currentWord}
+      handleClick={handleClick} 
+      />
       <button className="new-game">New Game</button>
     </main>
   );
