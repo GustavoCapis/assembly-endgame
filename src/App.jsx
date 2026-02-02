@@ -19,7 +19,7 @@ export default function AssemblyEndgame() {
   ).length;
 
   //Add end game mechanism
-  const isGameLost = wrongGuessCount >= data.length
+  const isGameLost = wrongGuessCount >= data.length - 1
   const isGameWon = currentWord.split("").every(letter => guessedLetters.includes(letter))
   const isGameOver = isGameLost || isGameWon
 
@@ -32,7 +32,11 @@ export default function AssemblyEndgame() {
   return (
     <main>
       <Header />
-      <Status />
+      <Status
+      isGameOver={isGameOver}
+      isGameLost={isGameLost}
+      isGameWon={isGameWon}
+      />
       <Languages wrongGuessCount={wrongGuessCount} />
       <Word currentWord={currentWord} guessedLetters={guessedLetters} />
       <Keyboard
