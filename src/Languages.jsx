@@ -1,19 +1,24 @@
 import { data } from "./data";
-export default function Languages() {
+import clsx from "clsx";
+export default function Languages(props) {
   //Map to render each language as a <p> with styles from data.js
   return (
-    <>
-      <section className="languages-section">
-        {data.map((data) => (
+    <section className="languages-section">
+      {data.map((lang, index) => {
+        const isLost = index < props.wrongGuessCount;
+
+        const className = clsx("language-chip", isLost && "lost");
+
+        return (
           <span
-            key={data.name}
-            className="language-chip"
-            style={{ color: data.color, backgroundColor: data.backgroundColor }}
+            key={lang.name}
+            className={className}
+            style={{ color: lang.color, backgroundColor: lang.backgroundColor }}
           >
-            {data.name}
+            {lang.name}
           </span>
-        ))}
-      </section>
-    </>
+        );
+      })}
+    </section>
   );
 }

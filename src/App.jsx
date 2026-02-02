@@ -12,7 +12,7 @@ export default function AssemblyEndgame() {
   //Set state for the guessed letters
   const [guessedLetters, setGuessedLetters] = useState([]);
 
-  //Derived state wrong guess value
+  //Derived state wrong guess count
   const wrongGuessCount = guessedLetters.filter(
     (letter) => !currentWord.includes(letter),
   ).length;
@@ -27,7 +27,7 @@ export default function AssemblyEndgame() {
     <main>
       <Header />
       <Status />
-      <Languages />
+      <Languages wrongGuessCount={wrongGuessCount} />
       <Word currentWord={currentWord} guessedLetters={guessedLetters} />
       <Keyboard
         guessedLetters={guessedLetters}

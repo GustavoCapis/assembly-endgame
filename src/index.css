@@ -63,9 +63,24 @@ header > p {
 .language-chip {
   border-radius: 3px;
   padding: 4.5px;
+  position: relative;
 }
 
-.word-section{
+.language-chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word-section {
   display: flex;
   justify-content: center;
   gap: 2px;
@@ -84,7 +99,7 @@ header > p {
   border-bottom: 1px solid #f9f4da;
 }
 .letter.guessed {
-color:#F9F4DA ;
+  color: #f9f4da;
 }
 
 .keyboard {
