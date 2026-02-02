@@ -6,9 +6,7 @@ export default function Languages(props) {
     <section className="languages-section">
       {data.map((lang, index) => {
         const isLost = index < props.wrongGuessCount;
-
         const className = clsx("language-chip", isLost && "lost");
-
         return (
           <span
             key={lang.name}
