@@ -19,9 +19,15 @@ export default function AssemblyEndgame() {
   ).length;
 
   //Add end game mechanism
-  const isGameLost = wrongGuessCount >= data.length - 1
-  const isGameWon = currentWord.split("").every(letter => guessedLetters.includes(letter))
-  const isGameOver = isGameLost || isGameWon
+  const isGameLost = wrongGuessCount >= data.length - 1;
+  const isGameWon = currentWord
+    .split("")
+    .every((letter) => guessedLetters.includes(letter));
+  const isGameOver = isGameLost || isGameWon;
+
+  //Derived values
+  const lastGuessedLetter = guessedLetters[guessedLetters.length - 1];
+  const isLastGuessIncorrect = lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
 
   function handleClick(letter) {
     setGuessedLetters((prevLetters) =>
@@ -33,9 +39,11 @@ export default function AssemblyEndgame() {
     <main>
       <Header />
       <Status
-      isGameOver={isGameOver}
-      isGameLost={isGameLost}
-      isGameWon={isGameWon}
+        isGameOver={isGameOver}
+        isGameLost={isGameLost}
+        isGameWon={isGameWon}
+        wrongGuessCount={wrongGuessCount}
+        isLastGuessIncorrect={isLastGuessIncorrect}
       />
       <Languages wrongGuessCount={wrongGuessCount} />
       <Word currentWord={currentWord} guessedLetters={guessedLetters} />

@@ -60,6 +60,13 @@ header > p {
   color: #f9f4da;
 }
 
+.game-status.miss {
+  background-color: #7a5ea7;
+  color: #f9f4da;
+  border: 1px dashed #323232;
+  font-style: italic;
+}
+
 .game-status > h2 {
   font-size: 1.25rem;
   margin: 5px;

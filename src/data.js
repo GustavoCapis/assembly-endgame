@@ -45,3 +45,6 @@ export const data = [
     color: "#F9F4DA",
   },
 ];
+
+
+
