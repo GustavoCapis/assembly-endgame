@@ -29,6 +29,7 @@ export default function AssemblyEndgame() {
   const lastGuessedLetter = guessedLetters[guessedLetters.length - 1];
   const isLastGuessIncorrect =
     lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
+  const numGuessesLeft = languages.length - 1;
 
   function handleClick(letter) {
     setGuessedLetters((prevLetters) =>
@@ -52,6 +53,7 @@ export default function AssemblyEndgame() {
         isGameOver={isGameOver}
         guessedLetters={guessedLetters}
         currentWord={currentWord}
+        numGuessesLeft={numGuessesLeft}
         handleClick={handleClick}
       />
       {isGameOver && <button className="new-game">New Game</button>}
