@@ -17,5 +17,20 @@ export default function Word(props) {
     );
   });
 
-  return <section className="word-section">{wordElements}</section>;
+  return (
+    <>
+      <section className="word-section">{wordElements}</section>
+      <section className="sr-only" aria-live="polite" role="status">
+        <p>
+          Current word:{" "}
+          {currentWord
+            .split("")
+            .map((letter) =>
+              guessedLetters.includes(letter) ? letter + "." : "blank.",
+            )
+            .join(" ")}
+        </p>
+      </section>
+    </>
+  );
 }

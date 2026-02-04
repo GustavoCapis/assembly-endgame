@@ -159,6 +159,11 @@ header > p {
   background-color: #ec5d49;
 }
 
+.keyboard-btn :disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .new-game {
   background-color: #11b5e5;
   border: 1px solid #d7d7d7;
@@ -170,4 +175,17 @@ header > p {
   margin-inline: auto;
   margin-top: 26px;
   cursor: pointer;
+}
+
+/*Accessibility*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

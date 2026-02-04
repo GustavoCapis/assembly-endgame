@@ -43,5 +43,12 @@ export default function Status(props) {
     return null;
   }
 
-  return <section className={className}>{statusMsg()}</section>;
+  return (
+    <section 
+    aria-live={"polite"} 
+    role="status" 
+    className={className}>
+      {statusMsg()}
+    </section>
+  );
 }

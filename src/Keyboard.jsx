@@ -17,6 +17,8 @@ export default function Keyboard(props) {
           <button
             disabled={props.isGameOver}
             key={letter}
+            aria-disabled={guessedLetters.includes(letter)}
+            aria-label={`Letter ${letter}`}
             onClick={() => props.handleClick(letter)}
             className={className}
           >
