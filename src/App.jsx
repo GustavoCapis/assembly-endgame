@@ -27,7 +27,8 @@ export default function AssemblyEndgame() {
 
   //Derived values
   const lastGuessedLetter = guessedLetters[guessedLetters.length - 1];
-  const isLastGuessIncorrect = lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
+  const isLastGuessIncorrect =
+    lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
 
   function handleClick(letter) {
     setGuessedLetters((prevLetters) =>
@@ -48,6 +49,7 @@ export default function AssemblyEndgame() {
       <Languages wrongGuessCount={wrongGuessCount} />
       <Word currentWord={currentWord} guessedLetters={guessedLetters} />
       <Keyboard
+        isGameOver={isGameOver}
         guessedLetters={guessedLetters}
         currentWord={currentWord}
         handleClick={handleClick}

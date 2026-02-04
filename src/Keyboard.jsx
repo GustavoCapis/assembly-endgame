@@ -15,6 +15,7 @@ export default function Keyboard(props) {
         });
         return (
           <button
+            disabled={props.isGameOver}
             key={letter}
             onClick={() => props.handleClick(letter)}
             className={className}
