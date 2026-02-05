@@ -5,11 +5,11 @@ import Status from "./Status";
 import Languages from "./Languages";
 import Keyboard from "./Keyboard";
 import Word from "./Word";
+import { getWord } from "./utils";
 
 export default function AssemblyEndgame() {
   //Set state for the word element
   const [currentWord, setCurrentWord] = useState("react");
-
   //Set state for the guessed letters
   const [guessedLetters, setGuessedLetters] = useState([]);
 
@@ -29,7 +29,7 @@ export default function AssemblyEndgame() {
   const lastGuessedLetter = guessedLetters[guessedLetters.length - 1];
   const isLastGuessIncorrect =
     lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
-  const numGuessesLeft = languages.length - 1;
+  const numGuessesLeft = data.length - 1;
 
   function handleClick(letter) {
     setGuessedLetters((prevLetters) =>
