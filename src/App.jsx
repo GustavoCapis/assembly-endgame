@@ -37,6 +37,12 @@ export default function AssemblyEndgame() {
     );
   }
 
+  //Restart game
+  function newGame() {
+    setCurrentWord(getWord())
+    setGuessedLetters([])
+  }
+
   return (
     <main>
       <Header />
@@ -56,7 +62,7 @@ export default function AssemblyEndgame() {
         numGuessesLeft={numGuessesLeft}
         handleClick={handleClick}
       />
-      {isGameOver && <button className="new-game">New Game</button>}
+      {isGameOver && <button onClick={newGame} className="new-game">New Game</button>}
     </main>
   );
 }
