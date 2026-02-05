@@ -9,7 +9,7 @@ import { getWord } from "./utils";
 
 export default function AssemblyEndgame() {
   //Set state for the word element
-  const [currentWord, setCurrentWord] = useState("react");
+  const [currentWord, setCurrentWord] = useState(getWord);
   //Set state for the guessed letters
   const [guessedLetters, setGuessedLetters] = useState([]);
 
