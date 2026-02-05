@@ -6,6 +6,7 @@ import Languages from "./Languages";
 import Keyboard from "./Keyboard";
 import Word from "./Word";
 import { getWord } from "./utils";
+import Confetti from "react-confetti";
 
 export default function AssemblyEndgame() {
   //Set state for the word element
@@ -39,8 +40,8 @@ export default function AssemblyEndgame() {
 
   //Restart game
   function newGame() {
-    setCurrentWord(getWord())
-    setGuessedLetters([])
+    setCurrentWord(getWord());
+    setGuessedLetters([]);
   }
 
   return (
@@ -54,10 +55,10 @@ export default function AssemblyEndgame() {
         isLastGuessIncorrect={isLastGuessIncorrect}
       />
       <Languages wrongGuessCount={wrongGuessCount} />
-      <Word 
-      currentWord={currentWord} 
-      guessedLetters={guessedLetters} 
-      isGameLost={isGameLost}
+      <Word
+        currentWord={currentWord}
+        guessedLetters={guessedLetters}
+        isGameLost={isGameLost}
       />
       <Keyboard
         isGameOver={isGameOver}
@@ -66,7 +67,12 @@ export default function AssemblyEndgame() {
         numGuessesLeft={numGuessesLeft}
         handleClick={handleClick}
       />
-      {isGameOver && <button onClick={newGame} className="new-game">New Game</button>}
+      {isGameWon && <Confetti />}
+      {isGameOver && (
+        <button onClick={newGame} className="new-game">
+          New Game
+        </button>
+      )}
     </main>
   );
 }
