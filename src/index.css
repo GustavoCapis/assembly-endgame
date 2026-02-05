@@ -128,6 +128,10 @@ header > p {
   color: #f9f4da;
 }
 
+.letter.missed {
+  color: #ba2a2a;
+}
+
 .keyboard {
   display: flex;
   flex-wrap: wrap;

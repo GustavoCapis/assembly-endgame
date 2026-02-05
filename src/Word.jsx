@@ -5,9 +5,11 @@ export default function Word(props) {
 
   const wordElements = letters.map((letter, index) => {
     const isGuessed = props.guessedLetters.includes(letter);
+    const isMissed = !isGuessed && props.isGameLost
 
     const className = clsx("letter", {
       guessed: isGuessed,
+      missed: isMissed
     });
 
     return (
