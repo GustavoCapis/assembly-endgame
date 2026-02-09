@@ -6,6 +6,12 @@ The player must guess the correct word before running out of attempts.
 ## Preview
 ![Assembly Endgame Preview](preview.png)
 
+## Features
+- On-screen keyboard for guessing letters
+- Win/Lose state with visual feedback
+- New game / restart flow
+- Responsive layout
+
 ## Technologies
 - React
 - JavaScript
