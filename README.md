@@ -3,6 +3,9 @@
 Assembly Endgame is a word-guessing game built with React.  
 The player must guess the correct word before running out of attempts.
 
+## Preview
+![Assembly Endgame Preview](preview.png)
+
 ## Technologies
 - React
 - JavaScript
